@@ -1,0 +1,8 @@
+2024-03-18 23:58:15,338 - mnist_predictor - INFO - Image preprocessing successful
+2024-03-18 23:58:17,421 - mnist_predictor - INFO - Prediction made with probabilities12: [[0.09348956 0.0154283  0.12817961 0.01912561 0.01820133 0.01023013
+  0.02943109 0.65814507 0.00650379 0.02126543]]
+2024-03-18 23:58:17,421 - mnist_predictor - INFO - Predicted class: Sneaker
+2024-03-19 15:07:55,460 - mnist_predictor - INFO - Image preprocessing successful
+2024-03-19 15:07:58,161 - mnist_predictor - INFO - Prediction made with probabilities: [[0.04952701 0.05433299 0.04379246 0.08765195 0.1251246  0.1796144
+  0.31394032 0.03966205 0.07228635 0.03406794]]
+2024-03-19 15:07:58,165 - mnist_predictor - INFO - Predicted class: Shirt
