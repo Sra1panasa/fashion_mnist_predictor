@@ -36,9 +36,10 @@ Project Root
 
 1. **Clone the git Repository:**
 
+* Clone the repo using below git url.Replace `branchname` with the branch from which we are cloning. 
+
    ```bash
-   git clone https://yourrepositorylink.git
-   
+   git clone https://github.com/Sra1panasa/fashion_mnist_predictor.git -b branchname
    ```
 
 2. **Build the Docker image:**
@@ -57,6 +58,33 @@ Project Root
 
     ```
     docker run -p 8000:8000 -v /path/on/your/host:/app/logs mnist-predictor
+
+    example: docker run -p 8000:8000 -v D:/Sravan/logs/fashion_mnist_docker.log:/app/logs/fashion_mnist_docker.log mnist-predictor
+    ```
+4. **Uploading Docker Image to Docker Hub(Optional):**
+
+* After we've built and tested your Docker image locally we can upload it to docker hub.Docker Hub is a cloud-based registry service that allows to share image with others or deploy it on different environments without creating again.
+
+* Steps to upload Docker image to Docker Hub:
+
+* Log in to Docker Hub: Before pushing your image to Docker Hub, we must log in using the Docker CLI. 
+
+    ```bash
+    docker login
+    ```
+* Tag Your Docker Image : Docker images are pushed to Docker Hub using a tag, which identifies the image version. we need to tag image with your Docker Hub username, repository name, and version. 
+
+* Replace `yourusername` with your actual Docker Hub username and `version` with your  desired version tag (e.g., `latest` or `1.0`).
+
+    ```bash
+    docker tag mnist-predictor yourusername/mnist-predictor:version
+    ```
+* Push the Image to Docker Hub: Once your image is tagged, we can push it to Docker Hub using the `docker push` command. This uploads image and makes it available in  Docker Hub repository.
+
+* Replace `yourusername` and `version` with Docker Hub username and the version tag you used earlier
+
+    ```bash
+    docker push yourusername/mnist-predictor:version
     ```
 
 ## Testing the Endpoint
