@@ -3,4 +3,5 @@ uvicorn==0.28.1
 tensorflow==2.16.1
 python-multipart==0.0.9
 Pillow==10.2.0
-#mlflow
+mlflow
+pytest>=6.0.0
